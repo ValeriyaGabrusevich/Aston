@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Aston</string>
+    <string name="btn_pause">Pause</string>
+    <string name="btn_play">Play</string>
 </resources>
