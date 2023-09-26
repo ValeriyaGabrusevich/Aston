@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Aston</string>
+    <string name="red_color">Красный</string>
+    <string name="yellow_color">Желтый</string>
+    <string name="light_blue_color">Голубой</string>
+    <string name="purple_color">Фиолетовый</string>
+    <string name="reset">Reset</string>
 </resources>

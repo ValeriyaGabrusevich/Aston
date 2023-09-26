@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="circle_padding_bottom">30dp</dimen>
+    <dimen name="triangle_side_length">10dp</dimen>
+    <dimen name="label_text_size">16sp</dimen>
+</resources>
