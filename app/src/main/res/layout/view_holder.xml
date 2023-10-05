@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/image_view_person_photo"
+        android:layout_width="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="100dp"
+        android:src="@drawable/baseline_person_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/text_view_person_name"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        app:layout_constraintTop_toTopOf="@id/image_view_person_photo"
+        app:layout_constraintStart_toEndOf="@id/image_view_person_photo"
+        app:layout_constraintBottom_toTopOf="@id/text_view_person_surname"/>
+    <TextView
+        android:id="@+id/text_view_person_surname"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/surname"
+        app:layout_constraintTop_toBottomOf="@id/text_view_person_name"
+        app:layout_constraintStart_toEndOf="@id/image_view_person_photo"
+        app:layout_constraintBottom_toTopOf="@id/text_view_person_phone_number"/>
+    <TextView
+        android:id="@+id/text_view_person_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        app:layout_constraintTop_toBottomOf="@id/text_view_person_surname"
+        app:layout_constraintStart_toEndOf="@id/image_view_person_photo"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_person_photo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
