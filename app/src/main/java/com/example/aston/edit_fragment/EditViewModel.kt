@@ -1,7 +1,11 @@
-package com.example.aston
+package com.example.aston.edit_fragment
 
 import androidx.lifecycle.*
 import androidx.lifecycle.viewmodel.CreationExtras
+import com.example.aston.App
+import com.example.aston.data.SingleLiveData
+import com.example.aston.data.PeopleRepository
+import com.example.aston.data.Person
 
 class EditViewModel(private val repository: PeopleRepository) : ViewModel() {
 

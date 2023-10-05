@@ -1,4 +1,4 @@
-package com.example.aston
+package com.example.aston.show_fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.aston.DetailFragment
+import com.example.aston.R
+import com.example.aston.data.Person
 import com.example.aston.databinding.RecyclerFragmentBinding
 
 class ShowPeopleFragment : Fragment() {

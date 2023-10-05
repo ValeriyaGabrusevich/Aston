@@ -1,10 +1,12 @@
-package com.example.aston
+package com.example.aston.show_fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.aston.R
+import com.example.aston.data.Person
 import com.example.aston.databinding.ViewHolderBinding
 
 class PersonAdapter(private val personActionListener: PersonActionListener) : RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {

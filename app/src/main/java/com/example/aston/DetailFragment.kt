@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.example.aston.edit_fragment.EditFragment
+import com.example.aston.data.Person
 import com.example.aston.databinding.DetailFragmentBinding
 
 class DetailFragment : Fragment() {

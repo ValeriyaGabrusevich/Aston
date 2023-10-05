@@ -1,6 +1,7 @@
-package com.example.aston
+package com.example.aston.show_fragment
 
 import androidx.recyclerview.widget.DiffUtil
+import com.example.aston.data.Person
 
 class DiffUtilPeopleCallback (
     private val oldList: List<Person>,

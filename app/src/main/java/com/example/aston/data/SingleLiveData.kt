@@ -1,4 +1,4 @@
-package com.example.aston
+package com.example.aston.data
 
 import androidx.annotation.MainThread
 import androidx.annotation.Nullable

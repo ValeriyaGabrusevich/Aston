@@ -1,4 +1,4 @@
-package com.example.aston
+package com.example.aston.data
 
 import java.io.Serializable
 

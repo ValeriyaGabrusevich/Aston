@@ -1,4 +1,5 @@
-package com.example.aston
+package com.example.aston.data
+import com.example.aston.data.Person
 import com.github.javafaker.Faker
 typealias PersonListener = (people: List<Person>) -> Unit
 

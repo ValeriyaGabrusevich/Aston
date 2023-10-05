@@ -1,4 +1,4 @@
-package com.example.aston
+package com.example.aston.data
 
 class PeopleRepository(service: PersonService) {
     private val people = mutableListOf<Person>()

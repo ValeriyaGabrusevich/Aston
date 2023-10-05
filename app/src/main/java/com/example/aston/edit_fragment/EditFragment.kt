@@ -1,4 +1,4 @@
-package com.example.aston
+package com.example.aston.edit_fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
+import com.example.aston.R
+import com.example.aston.show_fragment.ShowPeopleFragment
+import com.example.aston.data.Person
 import com.example.aston.databinding.EditFragmentBinding
 
 class EditFragment : Fragment() {

@@ -3,6 +3,7 @@ package com.example.aston
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.aston.databinding.ActivityMainBinding
+import com.example.aston.show_fragment.ShowPeopleFragment
 
 class MainActivity : AppCompatActivity() {
 	private lateinit var binding: ActivityMainBinding

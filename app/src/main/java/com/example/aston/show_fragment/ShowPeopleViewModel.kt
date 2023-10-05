@@ -1,8 +1,12 @@
-package com.example.aston
+package com.example.aston.show_fragment
 
 import androidx.lifecycle.*
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewmodel.CreationExtras
+import com.example.aston.App
+import com.example.aston.data.SingleLiveData
+import com.example.aston.data.PeopleRepository
+import com.example.aston.data.Person
 
 class ShowPeopleViewModel(repository: PeopleRepository):ViewModel(), PersonActionListener {
 
