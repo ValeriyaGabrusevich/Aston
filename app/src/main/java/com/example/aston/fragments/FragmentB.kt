@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.aston.R
 import com.example.aston.databinding.FragmentBBinding
+
 
 class FragmentB : Fragment() {
     private var _binding: FragmentBBinding? = null
@@ -27,13 +28,13 @@ class FragmentB : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnFragmentB.setOnClickListener {view : View ->
-            val bundle = Bundle()
-            bundle.putString("myArg","Hello Fragment C")
-            view.findNavController().navigate(R.id.fragment_c, bundle)
+            val string = "Hello fragment C"
+            val action = FragmentBDirections.toFragmentC(string)
+            findNavController().navigate(action)
 
         }
-        binding.btnFragmentBBack.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.fragment_a)
+        binding.btnFragmentBBack.setOnClickListener {
+            findNavController().navigateUp()
         }
     }
 

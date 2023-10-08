@@ -4,15 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.aston.R
 import com.example.aston.databinding.FragmentCBinding
 
 class FragmentC : Fragment() {
     private var _binding: FragmentCBinding? = null
     private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,22 +29,19 @@ class FragmentC : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.textViewFragmentC.text = arguments?.getString(STRING_ARG)
-        binding.btnFragmentC.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.fragment_d)
+        val args: FragmentCArgs by navArgs()
+        val text = args.myArg
+        binding.textViewFragmentC.text = text
+        binding.btnFragmentC.setOnClickListener {
+            findNavController().navigate(FragmentCDirections.toFragmentD2())
 
         }
-        binding.btnFragmentCBack.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.fragment_b)
+        binding.btnFragmentCBack.setOnClickListener {
+           findNavController().navigateUp()
         }
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        private const val STRING_ARG = "myArg"
     }
 }

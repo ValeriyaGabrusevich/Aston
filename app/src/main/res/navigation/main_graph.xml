@@ -19,19 +19,18 @@
         android:name="com.example.aston.fragments.FragmentB"
         tools:layout="@layout/fragment_b">
         <action
-            android:id="@+id/to_fragment_c2"
+            android:id="@+id/to_fragment_c"
             app:destination="@id/fragment_c"
             app:popUpTo="@id/fragment_a">
-
-            <argument
-                android:name="myArg"
-                app:argType="string" />
         </action>
     </fragment>
     <fragment
         android:id="@+id/fragment_c"
         android:name="com.example.aston.fragments.FragmentC"
         tools:layout="@layout/fragment_c">
+        <argument
+            android:name="myArg"
+            app:argType="string" />
 
 
         <action

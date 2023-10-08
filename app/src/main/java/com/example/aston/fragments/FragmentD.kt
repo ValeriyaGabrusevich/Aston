@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.aston.R
 import com.example.aston.databinding.FragmentDBinding
 
@@ -25,9 +26,8 @@ class FragmentD : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnFragmentD.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.fragment_a)
-
+        binding.btnFragmentD.setOnClickListener {
+            findNavController().navigate(FragmentDDirections.toFragmentA())
         }
     }
 

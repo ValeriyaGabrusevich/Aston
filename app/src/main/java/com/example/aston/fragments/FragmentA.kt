@@ -29,9 +29,8 @@ class FragmentA : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnFragmentA.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.fragment_b)
-            //Navigation.createNavigateOnClickListener(R.id.fragment_b)
+        binding.btnFragmentA.setOnClickListener { view : View ->
+            view.findNavController().navigate(FragmentADirections.toFragmentB())
         }
     }
 
