@@ -33,7 +33,7 @@ class FragmentB : Fragment() {
 
         }
         binding.btnFragmentBBack.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.fragment_a)
+            view.findNavController().navigateUp()
         }
     }
 
