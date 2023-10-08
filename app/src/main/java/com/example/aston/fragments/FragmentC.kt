@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.aston.R
 import com.example.aston.databinding.FragmentCBinding
 
@@ -24,15 +26,12 @@ class FragmentC : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.textViewFragmentC.text = arguments?.getString(STRING_ARG)
-        binding.btnFragmentC.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentD())
-                .commit()
+        binding.btnFragmentC.setOnClickListener {view : View ->
+            view.findNavController().navigate(R.id.fragment_d)
+
         }
-        binding.btnFragmentCBack.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentB())
-                .commit()
+        binding.btnFragmentCBack.setOnClickListener {view : View ->
+            view.findNavController().navigate(R.id.fragment_b)
         }
     }
 
@@ -42,13 +41,6 @@ class FragmentC : Fragment() {
     }
 
     companion object {
-        const val STRING_ARG = "STRING_ARG"
-
-        @JvmStatic
-        fun newInstance(str: String) = FragmentC().apply {
-            arguments = Bundle().apply {
-                putString(STRING_ARG, str)
-            }
-        }
+        private const val STRING_ARG = "myArg"
     }
 }

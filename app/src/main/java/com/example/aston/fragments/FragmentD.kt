@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.aston.R
 import com.example.aston.databinding.FragmentDBinding
 
@@ -23,10 +25,9 @@ class FragmentD : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnFragmentD.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentA())
-                .commit()
+        binding.btnFragmentD.setOnClickListener {view : View ->
+            view.findNavController().navigate(R.id.fragment_a)
+
         }
     }
 

@@ -1,10 +1,15 @@
 package com.example.aston.fragments
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import com.example.aston.MainActivity
 import com.example.aston.R
 import com.example.aston.databinding.FragmentABinding
 
@@ -18,16 +23,15 @@ class FragmentA : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentABinding.inflate(inflater,container,false)
+        _binding = FragmentABinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnFragmentA.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentB())
-                .commit()
+        binding.btnFragmentA.setOnClickListener {view : View ->
+            view.findNavController().navigate(R.id.fragment_b)
+            //Navigation.createNavigateOnClickListener(R.id.fragment_b)
         }
     }
 
