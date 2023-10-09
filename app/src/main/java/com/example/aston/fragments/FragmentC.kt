@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.aston.R
+import com.example.aston.Screens
 import com.example.aston.databinding.FragmentCBinding
+import com.example.aston.fragments.MyApplication.router
 
 class FragmentC : Fragment() {
     private var _binding: FragmentCBinding? = null
@@ -25,14 +26,10 @@ class FragmentC : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.textViewFragmentC.text = arguments?.getString(STRING_ARG)
         binding.btnFragmentC.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentD())
-                .commit()
+            router.navigateTo(Screens.fragmentD())
         }
         binding.btnFragmentCBack.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentB())
-                .commit()
+            router.navigateTo(Screens.fragmentB())
         }
     }
 

@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.aston.R
+import com.example.aston.Screens
 import com.example.aston.databinding.FragmentBBinding
+import com.example.aston.fragments.MyApplication.router
 
 class FragmentB : Fragment() {
     private var _binding: FragmentBBinding? = null
     private val binding get() = _binding!!
+
 
 
     override fun onCreateView(
@@ -26,14 +28,10 @@ class FragmentB : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val string = "Hello fragment C"
         binding.btnFragmentB.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentC.newInstance(string))
-                .commit()
+            router.navigateTo(Screens.fragmentC(string))
         }
         binding.btnFragmentBBack.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentA())
-                .commit()
+          router.navigateTo(Screens.fragmentA())
         }
     }
 

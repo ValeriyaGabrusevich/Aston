@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.aston.R
+import com.example.aston.Screens
 import com.example.aston.databinding.FragmentABinding
+import com.example.aston.fragments.MyApplication.router
 
 class FragmentA : Fragment() {
     private var _binding: FragmentABinding? = null
@@ -25,9 +26,9 @@ class FragmentA : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnFragmentA.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container_view, FragmentB())
-                .commit()
+            router.navigateTo(Screens.fragmentB())
+
+
         }
     }
 
