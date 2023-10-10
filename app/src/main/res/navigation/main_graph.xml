@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_a"
+    android:id="@+id/main_graph" >
+    <fragment
+        android:id="@+id/fragment_a"
+        tools:layout="@layout/fragment_a"
+        android:name="com.example.aston.fragments.FragmentA"
+        android:label="Home">
+        <action
+            android:id="@+id/to_fragment_b"
+            app:destination="@id/fragment_b" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_b"
+        android:name="com.example.aston.fragments.FragmentB"
+        tools:layout="@layout/fragment_b">
+        <action
+            android:id="@+id/to_fragment_c"
+            app:destination="@id/fragment_c"
+            app:popUpTo="@id/fragment_a">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_c"
+        android:name="com.example.aston.fragments.FragmentC"
+        tools:layout="@layout/fragment_c">
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+
+        <action
+            android:id="@+id/to_fragment_d2"
+            app:destination="@id/fragment_d"
+            app:popUpTo="@id/fragment_b" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_d"
+        android:name="com.example.aston.fragments.FragmentD"
+        tools:layout="@layout/fragment_d">
+        <action
+            android:id="@+id/to_fragment_a"
+            app:destination="@id/fragment_a"
+            app:popUpTo="@id/fragment_c" />
+    </fragment>
+</navigation>
+

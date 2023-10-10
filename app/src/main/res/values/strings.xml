@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Aston</string>
+    <string name="to_fragment_b">to fragment B</string>
+    <string name="to_fragment_c">to fragment C</string>
+    <string name="back_to_a">back to fragment A</string>
+    <string name="to_fragment_d">to fragment D</string>
+    <string name="hello_fragment_c">Hello Fragment C</string>
+    <string name="back_to_b">back to B</string>
 </resources>
